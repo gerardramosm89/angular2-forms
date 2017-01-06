@@ -12,7 +12,7 @@ export class User {
 })
 export class TemplateFormComponent implements OnInit {
   user: User;
-
+	submitted: boolean;
   ngOnInit() {
 	this.user = {
 		name: '',
@@ -26,5 +26,6 @@ export class TemplateFormComponent implements OnInit {
 
 	processForm(){
 		console.log(this.user);
+		this.submitted = true;
 	}
 }
