@@ -1,1 +1,24 @@
-i am the reactive form
+<form (ngSubmit)="processForm()" [formGroup]="form">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" 
+				formControlName="name" required>
+    </div>
+		<span class="help-block" *ngIf="nameError">
+			{{ nameError }}
+		</span>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" 
+				formControlName="username" required>
+    </div>
+    <span class="help-block" *ngIf="usernameError">
+      {{ usernameError }}
+    </span>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </div>
+
+</form>

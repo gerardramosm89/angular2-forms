@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 
 		<h2>Template Form</h2>
 		<template-form></template-form>
+		<h2>Reactive Form </h2>
+		<reactive-form></reactive-form>
 	`
 })
 export class AppComponent {
